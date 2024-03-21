@@ -1,0 +1,22 @@
+.summary {
+  display: flex;
+  gap: 10rem;
+  color: white;
+  li {
+    list-style-type: none;
+  }
+}
+
+.table {
+  overflow: hidden;
+  tr {
+    display: flex;
+    padding: 0;
+    margin: 0 10px;
+  }
+  td {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
+}

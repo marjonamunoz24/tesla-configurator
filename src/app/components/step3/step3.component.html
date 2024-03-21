@@ -1,0 +1,32 @@
+<h3>Step 3: Summary</h3>
+<h5>Your Tesla: {{ car.model?.description }}</h5>
+
+<table class="table">
+  <tr>
+    <td>
+      {{ car.configSelected?.description }}
+      <p>
+        Range: {{ car.configSelected?.range }} - Max speed:
+        {{ car.configSelected?.speed }}
+      </p>
+    </td>
+    <td>{{ car.configSelected?.price | currency : "USD" }}</td>
+  </tr>
+  <tr>
+    <td>{{ car.colorSelected?.description }}</td>
+    <td>{{ car.colorSelected?.price | currency : "USD" }}</td>
+  </tr>
+
+  <tr *ngIf="car.towHitch">
+    <td>To Hitch Package</td>
+    <td>{{ "1000" | currency : "USD" }}</td>
+  </tr>
+  <tr *ngIf="car.yoke">
+    <td>Yoke Package</td>
+    <td>{{ "1000" | currency : "USD" }}</td>
+  </tr>
+  <tr>
+    <td><b>TOTAL COST: </b></td>
+    <td>{{ totalCost | currency : "USD" }}</td>
+  </tr>
+</table>

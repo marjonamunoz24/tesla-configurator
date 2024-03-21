@@ -36,7 +36,7 @@ export class Step1Component {
   private dataService = inject(DataService);
   private formBuilder = inject(FormBuilder);
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getModels();
     this.subscribeForEvent();
 
@@ -56,7 +56,7 @@ export class Step1Component {
     this.subscribeToFormChanges();
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.carSubscription.unsubscribe();
   }
 

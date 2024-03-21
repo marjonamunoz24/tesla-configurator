@@ -21,12 +21,12 @@ export class Step3Component {
   teslaService = inject(TeslaService);
   dataService = inject(DataService);
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.subscribeForEvents();
     this.getTotalCost();
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.carSubscription.unsubscribe();
   }
 
@@ -47,7 +47,7 @@ export class Step3Component {
     }
   }
 
-  private subscribeForEvents() {
+  private subscribeForEvents(): void {
     this.carSubscription = this.dataService.getCar().subscribe((data) => {
       this.car = data;
     });

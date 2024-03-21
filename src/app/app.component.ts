@@ -33,12 +33,12 @@ export class AppComponent {
   private router = inject(Router);
   private dataService = inject(DataService);
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.router.navigate(['/step1']);
     this.subscribeForEvent();
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.carSubscription.unsubscribe();
   }
 

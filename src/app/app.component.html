@@ -173,9 +173,9 @@
 </style>
 
 <main class="main">
-  <button id="step 1" (click)="navigation('step1')">Step 1</button>
+  <button id="step1" (click)="navigation('step1')">Step 1</button>
   <button
-    id="step 2"
+    id="step2"
     (click)="navigation('step2')"
     [disabled]="!car.model || !car.colorSelected"
   >
@@ -183,7 +183,7 @@
   </button>
 
   <button
-    id="step 3"
+    id="step3"
     (click)="navigation('step3')"
     [disabled]="!car.configSelected"
   >

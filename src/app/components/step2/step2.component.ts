@@ -29,7 +29,7 @@ export class Step2Component {
   teslaService = inject(TeslaService);
   dataService = inject(DataService);
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.subscribeForEvents();
     this.getConfigs();
 
@@ -42,7 +42,7 @@ export class Step2Component {
     }
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.carSubscription.unsubscribe();
   }
 
@@ -92,7 +92,7 @@ export class Step2Component {
   /**
    * Subscribe for event for Car changes
    */
-  private subscribeForEvents() {
+  private subscribeForEvents(): void {
     this.carSubscription = this.dataService.getCar().subscribe((data) => {
       this.car = data;
     });

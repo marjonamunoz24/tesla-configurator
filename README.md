@@ -1,6 +1,8 @@
 # TeslaConfigurator
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
+## Demo
+Navigate to `tesla-configurator-kappa.vercel.app`
 
 ## Development server
 
